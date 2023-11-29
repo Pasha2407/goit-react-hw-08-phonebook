@@ -1,0 +1,21 @@
+.Container {
+    height: 100vh;
+}
+
+.Container>header,
+.Container>footer {
+    width: 100%;
+    background-color: #f0f1f3;
+    height: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.Container>main {
+    height: 84%;
+    overflow: auto;
+}
+
+.Container>footer {
+    justify-content: center;
+}

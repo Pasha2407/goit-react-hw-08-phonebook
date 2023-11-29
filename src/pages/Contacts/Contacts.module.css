@@ -1,0 +1,11 @@
+.Container {
+    width: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f0f1f3;
+    margin: 30px auto;
+}
+
+.Container>h2 {
+    margin: 0;
+}
