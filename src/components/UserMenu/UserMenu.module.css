@@ -1,0 +1,32 @@
+.UserMenu>button {
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-color: white;
+    border: 3px solid gray;
+    margin-left: 10px;
+}
+
+.UserMenu>button:hover {
+    background-color: gray;
+    color: white;
+}
+
+@media screen and (max-width: 630px) {
+    .UserMenu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .UserMenu>span {
+        font-size: 10px;
+    }
+
+    .UserMenu>button {
+        padding: 1px 8px;
+        border-radius: 5px;
+    }
+}

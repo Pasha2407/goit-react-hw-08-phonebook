@@ -1,0 +1,26 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Container>img {
+    width: 200px;
+}
+
+.Container>a {
+    padding: 6px 15px 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 3px solid #1ebd21;
+}
+
+.Container>a:hover {
+    background-color: #1ebd21;
+    color: white;
+}

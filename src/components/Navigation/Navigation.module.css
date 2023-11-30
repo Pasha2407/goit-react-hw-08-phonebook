@@ -6,15 +6,33 @@
     justify-content: space-between;
 }
 
+.Navigation>section {
+    display: flex;
+    align-items: center;
+}
+
 .Navigation>section>a {
     font-size: 20px;
     color: black;
     text-decoration: none;
     padding: 5px 10px;
-    border-bottom: solid #f0f1f3;
+    border-bottom: solid rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
 }
 
 .Navigation>section>a:hover {
     color: #1ebd21;
+}
+
+@media screen and (max-width: 630px) {
+    .Navigation>section>a {
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .Navigation {
+        padding: 10px;
+    }
 }

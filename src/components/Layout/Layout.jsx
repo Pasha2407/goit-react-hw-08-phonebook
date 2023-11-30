@@ -11,7 +11,9 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>Phonebook app by Pasha</footer>
+      <footer>
+        <small>© 2023 Developed Pavlo Khimchuk</small>
+      </footer>
     </div>
   );
 };

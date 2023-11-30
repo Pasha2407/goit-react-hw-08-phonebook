@@ -5,8 +5,9 @@ import {
   selectVisibleContacts,
   selectContactsIsLoading,
   selectContactslsError,
-} from 'redux/contacts.selectors';
-import { fetchContacts } from 'redux/contacts.reducer';
+} from 'redux/contacts/contacts.selectors';
+import { fetchContactsThunk } from 'redux/contacts/contacts.services';
+import css from './ContactList.module.css';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -15,11 +16,11 @@ export const ContactList = () => {
   const error = useSelector(selectContactslsError);
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(fetchContactsThunk());
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={css.List}>
       {isLoading && !error ? (
         <i>Loading...</i>
       ) : (

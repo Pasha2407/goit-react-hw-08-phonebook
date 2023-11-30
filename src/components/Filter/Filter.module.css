@@ -1,0 +1,33 @@
+.Filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.Filter>label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Filter>label>h2 {
+    margin: 0;
+}
+
+.Filter>label>input {
+    width: 300px;
+    padding: 10px;
+}
+
+.Filter>label>p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .Filter>label>input {
+        width: 180px;
+    }
+}

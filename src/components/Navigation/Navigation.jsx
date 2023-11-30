@@ -1,13 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import css from './Navigation.module.css';
-import { selectAuthenticated, selectUserData } from 'redux/auth/selectors';
-import { logoutThunk } from 'redux/auth/services';
+import { selectAuthenticated } from 'redux/auth/auth.selectors';
+import { UserMenu } from 'components/UserMenu/UserMenu';
 
 export const Navigation = () => {
   const authenticated = useSelector(selectAuthenticated);
-  const userData = useSelector(selectUserData);
-  const dispatch = useDispatch();
 
   return (
     <nav className={css.Navigation}>
@@ -34,10 +32,7 @@ export const Navigation = () => {
       </section>
       <section>
         {authenticated ? (
-          <div>
-            <span>Hello, {userData.name}</span>{' '}
-            <button onClick={() => dispatch(logoutThunk())}>Log out</button>
-          </div>
+          <UserMenu />
         ) : (
           <>
             <NavLink
