@@ -40,6 +40,7 @@ const authSlice = createSlice({
                     registerThunk.pending,
                     loginThunk.pending,
                     refreshThunk.pending,
+                    logoutThunk.pending,
                 ),
                 state => {
                     state.isLoading = true;
@@ -51,6 +52,7 @@ const authSlice = createSlice({
                     registerThunk.rejected,
                     loginThunk.rejected,
                     refreshThunk.rejected,
+                    logoutThunk.rejected,
                 ),
                 (state, { payload }) => {
                     state.isLoading = false;

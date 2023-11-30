@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { registerThunk } from 'redux/auth/auth.services';
+import { selectAuthError } from 'redux/auth/auth.selectors';
 import css from 'components/Form.module.css';
 
 export const Register = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectAuthError);
 
   const onSubmit = event => {
     event.preventDefault();
@@ -46,6 +48,12 @@ export const Register = () => {
           />
         </label>
         <button type="submit">Sign up</button>
+        {error && (
+          <>
+            <span style={{ color: 'red' }}>Error Registration!</span>
+            <small>Maybe the same user is already registered</small>
+          </>
+        )}
       </form>
     </div>
   );

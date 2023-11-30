@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loginThunk } from 'redux/auth/auth.services';
+import { selectAuthError } from 'redux/auth/auth.selectors';
 import css from 'components/Form.module.css';
 
 export const Login = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectAuthError);
 
   const onSubmit = event => {
     event.preventDefault();
@@ -40,6 +42,12 @@ export const Login = () => {
           />
         </label>
         <button type="submit">Log in</button>
+        {error && (
+          <>
+            <span style={{ color: 'red' }}>Error Log in!</span>
+            <small>Maybe wrong password or email</small>
+          </>
+        )}
       </form>
     </div>
   );
