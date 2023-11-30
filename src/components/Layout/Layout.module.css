@@ -50,3 +50,9 @@
         background: #f0f1f3;
     }
 }
+
+@media screen and (max-height: 500px) and (max-width: 1000px) {
+    .Container {
+        height: calc(100vh - 50px);
+    }
+}
